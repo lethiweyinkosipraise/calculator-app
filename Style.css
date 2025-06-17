@@ -1,0 +1,94 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f7f6f7f0, #12121312);
+  color: white;
+  text-align: center;
+  padding-top: 50px;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.calculator {
+  width: 320px;
+  padding: 20px;
+  background: #000;
+  border-radius: 40px;
+  box-shadow:
+    0 4px 20px rgba(104, 102, 98, 0.726),
+    inset 0 0 5px #333;
+}
+h1{
+  margin-bottom: 25px;
+  text-shadow: 0 0 8px rgba(0,0,0,0.3);
+}
+
+#screen {
+  width: 220px;
+  height: 50px;
+  font-size: 24px;
+  text-align: right;
+  padding-right: 15px;
+  border-radius: 10px;
+  border: none;
+  margin-bottom: 25px;
+  box-shadow: inset 2px 2px 8px rgba(0,0,0,0.2);
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+button {
+  
+  width: 55px;
+  height: 55px;
+  margin: 8px 6px;
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+/* Number buttons */
+button:not(.action) {
+  background: #606361c2;
+  color: white;
+}
+
+button:not(.action):hover {
+  background: #838683a5;
+}
+
+/* Operator buttons */
+button.operator {
+  background: #da9627;
+  color: white;
+}
+
+button.operator:hover {
+  background: #d28219;
+}
+
+/* Equal button */
+button.equals {
+  background: #66a933;
+  color: white;
+  width: 120px;
+}
+
+button.equals:hover {
+  background: #73e411;
+}
+
+/* Clear button */
+button.clear {
+  background: #f44336;
+  color: white;
+  width: 120px;
+}
+
+button.clear:hover {
+  background: #d32f2f;
+}

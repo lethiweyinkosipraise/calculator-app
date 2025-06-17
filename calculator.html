@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ADVANCED CALCULATOR</title>
+  <link rel="stylesheet" href="style.css">+
+</head>
+<body>
+
+  <h1>CALCULATOR</h1>
+
+  <input id="screen" type="text" value="0" readonly><br><br>
+
+  <!-- Number Buttons -->
+  <button onclick="press('1')">1</button>
+  <button onclick="press('2')">2</button>
+  <button onclick="press('3')">3</button><br>
+
+  <button onclick="press('4')">4</button>
+  <button onclick="press('5')">5</button>
+  <button onclick="press('6')">6</button><br>
+
+  <button onclick="press('7')">7</button>
+  <button onclick="press('8')">8</button>
+  <button onclick="press('9')">9</button><br>
+
+  <button onclick="press('0')">0</button>
+  <button onclick="press('+')">+</button>
+  <button onclick="press('-')">-</button><br>
+
+  <button onclick="press('*')">*</button>
+  <button onclick="press('/')">/</button>
+  <button onclick="press('.')">.</button><br><br>
+
+  <!-- Action Buttons -->
+  <button onclick="calculate()">=</button>
+  <button onclick="clearScreen()">Clear</button>
+
+  <script>
+    function press(value) {
+      let screen = document.getElementById("screen");
+      if (screen.value === "0") {
+        screen.value = value; // Replace 0 with the first number
+      } else {
+        screen.value += value;
+      }
+    }
+
+    function calculate() {
+      let screen = document.getElementById("screen");
+      try {
+        screen.value = eval(screen.value);
+      } catch {
+        screen.value = "Error";
+      }
+    }
+
+    function clearScreen() {
+      document.getElementById("screen").value = "0";
+    }
+  </script>
+
+</body>
+</html>
